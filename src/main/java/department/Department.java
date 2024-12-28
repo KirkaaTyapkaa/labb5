@@ -29,4 +29,23 @@ public class Department extends OrganizationComponent {
         );
     }
 
+    public int getExpenses() {
+        int expenses = 0;
+
+        for (Employee employee : employees)
+            expenses += employee.getSalary();
+
+        return expenses;
+    }
+
+    public int getVacationsCount() {
+        int vacation = 0;
+
+        for (Employee employee : employees)
+            if (employee.getVacationStatus())
+                vacation++;
+
+        return vacation;
+    }
+
 }
