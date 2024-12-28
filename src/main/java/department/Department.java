@@ -24,11 +24,13 @@ public class Department extends OrganizationComponent {
 
     public String getInfo() {
         return String.format(
-                "Department: %s.",
-                super.getName()
+                "Department: %s; Employees: %d; Expenses: %d; Vacations: %d.",
+                this.getName(),
+                this.employees.size(),
+                this.getExpenses(),
+                this.getVacationsCount()
         );
     }
-
     public int getExpenses() {
         int expenses = 0;
 
