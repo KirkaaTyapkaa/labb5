@@ -49,4 +49,26 @@ class DepartmentTest {
 
         assertEquals("Department: IT.", department.getInfo());
     }
+
+    @Test
+    void getExpenses() {
+        Employee employee = new Employee("John", 1000);
+        Department department = new Department("IT");
+
+        department.addEmployee(employee);
+
+        assertEquals(1000, department.getExpenses());
+    }
+
+    @Test
+    void getVacationsCount() {
+        Employee employee = new Employee("John", 1000);
+        Department department = new Department("IT");
+
+        department.addEmployee(employee);
+        employee.approveVacation();
+
+        assertTrue(employee.getVacationStatus());
+
+    }
 }
