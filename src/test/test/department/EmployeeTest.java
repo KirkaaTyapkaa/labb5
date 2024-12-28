@@ -3,6 +3,7 @@ package department;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 class EmployeeTest {
     @Test
     void setSalary() {
@@ -37,4 +38,27 @@ class EmployeeTest {
         assertEquals(salary - decrement, employee.getSalary());
     }
 
+    @Test
+    void getSalary() {
+        int salary = 2;
+
+        Employee employee = new Employee("John Doe", salary);
+
+        assertEquals(salary, employee.getSalary());
+    }
+
+    @Test
+    void getInfo() {
+        Employee employee = new Employee("John Doe", 1);
+
+        String result = String.format(
+                "Employee: %s; Salary: %s",
+                employee.getName(),
+
+                employee.getSalary()
+
+        );
+
+        assertEquals(result, employee.getInfo());
+    }
 }
