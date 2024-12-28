@@ -43,7 +43,7 @@ class EmployeeTest {
         Employee employee = new Employee("John Doe", 1);
 
         String result = String.format(
-                "Employee: %s; Salary: %s",
+                "Employee: %s; Salary: %s;",
                 employee.getName(),
                 employee.getSalary()
         );

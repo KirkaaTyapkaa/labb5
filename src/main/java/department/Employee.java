@@ -36,4 +36,29 @@ public class Employee extends OrganizationComponent {
         );
     }
 
+
+    public void approvePromotion() {
+        this.isPromotionApproved = true;
+    }
+
+    public void rejectPromotion() {
+        this.isPromotionApproved = false;
+    }
+
+    public boolean getPromotionStatus() {
+        return this.isPromotionApproved;
+    }
+
+    public void approveVacation() {
+        isVacationApproved = true;
+    }
+
+    public void rejectVacation() {
+        isVacationApproved = false;
+    }
+
+    public boolean getVacationStatus() {
+        return isVacationApproved;
+    }
+
 }
