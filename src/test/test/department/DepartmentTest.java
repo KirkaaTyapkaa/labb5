@@ -47,7 +47,7 @@ class DepartmentTest {
 
         department.addEmployee(employee);
 
-        assertEquals("Department: IT.", department.getInfo());
+        assertEquals("Department: IT; Employees: 1; Expenses: 1000; Vacations: 0.", department.getInfo());
     }
 
     @Test
