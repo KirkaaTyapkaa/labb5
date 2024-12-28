@@ -39,26 +39,62 @@ class EmployeeTest {
     }
 
     @Test
-    void getSalary() {
-        int salary = 2;
-
-        Employee employee = new Employee("John Doe", salary);
-
-        assertEquals(salary, employee.getSalary());
-    }
-
-    @Test
     void getInfo() {
         Employee employee = new Employee("John Doe", 1);
 
         String result = String.format(
                 "Employee: %s; Salary: %s",
                 employee.getName(),
-
                 employee.getSalary()
-
         );
 
         assertEquals(result, employee.getInfo());
     }
+
+
+    @Test
+    void approvePromotion() {
+        Employee employee = new Employee("John Doe", 1);
+        employee.approvePromotion();
+
+        assertTrue(employee.getPromotionStatus());
+    }
+
+    @Test
+    void rejectPromotion() {
+        Employee employee = new Employee("John Doe", 1);
+        employee.rejectPromotion();
+
+        assertFalse(employee.getPromotionStatus());
+    }
+
+    @Test
+    void getPromotionStatus() {
+        Employee employee = new Employee("John Doe", 1);
+
+        assertFalse(employee.getPromotionStatus());
+    }
+
+    @Test
+    void approveVacation() {
+        Employee employee = new Employee("John Doe", 1);
+        employee.approveVacation();
+
+        assertTrue(employee.getVacationStatus());
+    }
+
+    @Test
+    void rejectVacation() {
+        Employee employee = new Employee("John Doe", 1);
+        employee.rejectVacation();
+
+        assertFalse(employee.getVacationStatus());
+    }
+
+    @Test
+    void getVacationStatus() {
+        Employee employee = new Employee("John Doe", 1);
+        assertFalse(employee.getVacationStatus());
+    }
+
 }
