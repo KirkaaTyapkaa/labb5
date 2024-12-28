@@ -40,5 +40,13 @@ class DepartmentTest {
 
         assertEquals(result, department.getEmployees());
     }
+    @Test
+    void getInfo() {
+        Employee employee = new Employee("John", 1000);
+        Department department = new Department("IT");
 
+        department.addEmployee(employee);
+
+        assertEquals("Department: IT.", department.getInfo());
+    }
 }
