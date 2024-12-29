@@ -24,4 +24,16 @@ class DirectorHandlerTest {
         assertEquals(result, manager.handleRequest(vacationRequest));
     }
 
+    @Test
+    void negativeHandleRequest() {
+        Employee alice = new Employee("Alice", 5000);
+
+        Request vacationRequest = new Request(alice, RequestType.PROMOTION);
+        DirectorHandler manager = new DirectorHandler();
+
+        String result = "Request could not be handled.";
+
+        assertEquals(result, manager.handleRequest(vacationRequest));
+    }
+
 }
