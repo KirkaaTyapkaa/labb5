@@ -43,9 +43,11 @@ class EmployeeTest {
         Employee employee = new Employee("John Doe", 1);
 
         String result = String.format(
-                "Employee: %s; Salary: %s;",
+                "Employee: %s; Vacation Approved: %s; Salary: %s; Promotion Approved: %s.",
                 employee.getName(),
-                employee.getSalary()
+                employee.getVacationStatus() ? "yes" : "no",
+                employee.getSalary(),
+                employee.getPromotionStatus() ? "yes" : "no"
         );
 
         assertEquals(result, employee.getInfo());

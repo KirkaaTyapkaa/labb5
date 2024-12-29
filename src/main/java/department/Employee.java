@@ -30,9 +30,11 @@ public class Employee extends OrganizationComponent {
     @Override
     public String getInfo() {
         return String.format(
-                "Employee: %s; Salary: %s;",
+                "Employee: %s; Vacation Approved: %s; Salary: %s; Promotion Approved: %s.",
                 this.getName(),
-                this.salary
+                this.isVacationApproved ? "yes" : "no",
+                this.salary,
+                this.isPromotionApproved ? "yes" : "no"
         );
     }
 
