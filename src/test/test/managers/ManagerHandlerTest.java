@@ -9,7 +9,8 @@ class ManagerHandlerTest {
     @Test
     void positiveHandleRequest() {
         Employee alice = new Employee("Alice", 5000);
-
+        alice.approveVacation();
+        
         Request vacationRequest = new Request(alice, RequestType.VACATION);
         ManagerHandler manager = new ManagerHandler();
 
